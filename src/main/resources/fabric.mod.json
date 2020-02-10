@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "ham_sandwich",
+	"version": "${version}",
+	"name": "Ham Sandwich",
+	"description": "Avoids client player lag on LAN games",
+	"authors": [
+		{
+			"name": "Grondag",
+			"contact": {
+				"github": "https://github.com/grondag"
+			}
+		}
+	],
+	"contributors": [
+	],
+	"contact": {
+		"homepage": "https://github.com/grondag/ham-sandwich",
+		"sources": "https://github.com/grondag/ham-sandwich"
+	},
+	"license": "APACHE",
+	"icon": "assets/ham_sandwich/ham_sandwich.png",
+	"environment": "client",
+	"entrypoints": {
+      "client": [ "grondag.hamsandwich.HamSandwich" ]
+    },
+	"mixins": [
+	  {
+	  	  "config": "ham_sandwich.client.json",
+	      "environment": "client"
+	  }
+    ],
+
+	"depends": {
+    	"fabricloader": ">=0.7.1",
+    	"minecraft": ">=1.15"
+	},
+	"custom": {
+    	"modmenu:api": false,
+    	"modmenu:clientsideOnly": true
+  	}
+}
